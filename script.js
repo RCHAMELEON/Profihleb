@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.master-class').hover(function () {
+    /*$('.master-class').hover(function () {
         var  height = $(this).find('.master-class-desc').height()+40;
         var pheight = $(this).height();
         if(height < pheight){
@@ -9,9 +9,9 @@ $(document).ready(function () {
         $(this).css('height', height);
     },function () {
         $(this).css('height', '')
-    });
+    });*/
 
-    $('.mk-sliders').slick({
+    /*$('.mk-sliders').slick({
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -19,5 +19,23 @@ $(document).ready(function () {
         nextArrow: '.arrow-next',
         adaptiveHeight: false,
         variableWidth: true
+    });*/
+    $('.owl-carousel').owlCarousel({
+        loop:false,
+        nav:true,
+        touchDrag:true,
+        responsive : {
+            0 : {
+                items:1
+            },
+            768 : {
+                items:2
+            },
+            1200:{
+                items:3
+            }
+        }
     });
+    $('.owl-prev').empty();
+    $('.owl-next').empty();
 });
