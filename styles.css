@@ -152,8 +152,12 @@
 .master-class-desc__title{
     font-size: 18px;
     line-height: 22px;
-    float: left;
-    display: block;
+    display: inline;
+    border-bottom: 1px solid transparent;
+    transition: all .3s ease;
+}
+.master-class-desc__title:hover{
+    border-bottom: 1px solid white;
 }
 .master-class-desc__text{
     margin-top: 19px;
@@ -414,6 +418,10 @@
     }
     .master-class_big .master-class-desc__title{
         width: 625px;
+        border-bottom: 2px solid transparent;
+    }
+    .master-class_big .master-class-desc__title:hover{
+        border-bottom: 2px solid white;
     }
     .master-class_big .master-class-desc .master-class-desc__text{
         width: 570px;
