@@ -346,7 +346,11 @@
     float: left;
     transition: all ease .3s;
 }
-
+.master-class-desc__link{
+    color: white !important;
+    text-decoration: none;
+    display: table;
+}
 @media (min-width: 768px) {
     .container{
         width: 728px;
@@ -396,7 +400,7 @@
     .master-class-desc{
         padding-top: 16px;
     }
-    .master-class-desc-info .red-button{
+    .red-button_small{
         width: 220px !important;
     }
     .master-class-desc__title{
