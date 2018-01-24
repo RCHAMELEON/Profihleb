@@ -1,15 +1,49 @@
 $(document).ready(function () {
-    /*$('.master-class').hover(function () {
-        var  height = $(this).find('.master-class-desc').height()+40;
-        var pheight = $(this).height();
-        if(height < pheight){
-            height = pheight;
-            $(this).find('.master-class-desc').css('height',height);
+    var flag = false;
+    $('#checkbox1').click(onclick, function () {
+        if(flag == false){
+            $('.all-classes_upcoming').fadeOut();
+            $('.all-classes_past').fadeIn();
+            flag  = true;
         }
-        $(this).css('height', height);
-    },function () {
-        $(this).css('height', '')
-    });*/
+        else {
+            $('.all-classes_upcoming').fadeIn();
+            $('.all-classes_past').fadeOut();
+            flag  = false;
+        }
+    });
+
+    $('.hamburger').click(onclick, function () {
+        if(flag == false){
+            $(this).addClass('open-hamburger');
+            $('.menu-hamburger').css('box-shadow','none');
+            $('.headings').addClass('headings_open');
+            $('.heading').css('display', 'table');
+            flag  = true;
+        }
+        else {
+            $(this).removeClass('open-hamburger');
+            $('.headings').removeClass('headings_open');
+            $('.menu-hamburger').css('box-shadow','1px 1px 0 0 rgba(230, 230, 230, 0.73)');
+            flag  = false;
+        }
+    });
+
+    $('.heading-past').click(onclick, function () {
+        $('.heading-up').css('display', 'none');
+        $('.headings').removeClass('headings_open');
+        $('.hamburger').removeClass('open-hamburger');
+        $('.all-classes_upcoming').fadeOut();
+        $('.all-classes_past').fadeIn();
+    });
+
+    $('.heading-up').click(onclick, function () {
+        $('.heading-past').css('display', 'none');
+        $('.headings').removeClass('headings_open');
+        $('.hamburger').removeClass('open-hamburger');
+        $('.all-classes_past').fadeOut();
+        $('.all-classes_upcoming').fadeIn();
+    });
 
     $('.mk-sliders').slick({
         arrows: true,
