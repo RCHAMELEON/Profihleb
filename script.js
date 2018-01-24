@@ -11,15 +11,6 @@ $(document).ready(function () {
         $(this).css('height', '')
     });*/
 
-    /*$('.mk-sliders').slick({
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: '.arrow-prev',
-        nextArrow: '.arrow-next',
-        adaptiveHeight: false,
-        variableWidth: true
-    });*/
     $('.mk-sliders').slick({
         arrows: true,
         dots: false,
@@ -52,22 +43,4 @@ $(document).ready(function () {
             }
         ]
     });
-    /*$('.owl-carousel').owlCarousel({
-        loop:false,
-        nav:true,
-        touchDrag:true,
-        responsive : {
-            0 : {
-                items:1
-            },
-            768 : {
-                items:2
-            },
-            1200:{
-                items:3
-            }
-        }
-    });
-    $('.owl-prev').empty();
-    $('.owl-next').empty();*/
 });
